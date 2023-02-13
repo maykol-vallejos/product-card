@@ -1,0 +1,162 @@
+
+:root{
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --very-dark-cyan: hsl(180, 100%, 14%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cream);
+    display: grid;
+    place-items: center;
+}
+
+.card{
+    display: flex;
+    width: 60rem;
+    height: 45rem;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 0.8rem;
+    color: var(--dark-grayish-blue);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image{
+    width: 50%;
+    object-fit: cover;
+}
+
+.mobile{
+    display: none;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    padding: 2.8rem;
+}
+
+
+.text{
+    padding-left: 0.5rem;
+}
+.subtitle-perfume{
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+    
+}
+
+.title{
+    padding-left: 0.4rem;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    font-size: 3.2rem;
+    color:var(--very-dark-blue);
+}
+
+.description{
+    padding-top: 0.3rem;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    padding-bottom: 2.4rem;
+    margin-top: 0.4rem;
+}
+
+.current-price{
+    font-family: 'Fraunces', serif;
+    font-size: 3.4rem;
+    color: var(--dark-cyan);
+    padding-top: 2rem;
+    padding-left: 0.4rem;
+}
+
+.old-price{
+    text-decoration: line-through;
+    font-size: 1.4rem;
+    padding-top: 3.4rem;
+    padding-left: 1.7rem;
+}
+
+.button-add-cart{
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 0.8rem;
+    height: 4.8rem;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.button-add-cart:hover{
+    background-color: var(--very-dark-cyan);
+}
+.icon-cart{
+    padding: 0 0.5rem 0 0;
+}
+
+@media (max-width: 375px) {
+    .card{
+        flex-direction: column;
+        width: 34rem;
+        height: 61rem;
+    }
+
+    .information{
+        padding: 2.5rem 1.8rem 2rem 2rem;
+        height: 100%;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+    .image{
+        width: 100%;
+        height: 24rem;
+    }
+    
+    .title{
+        margin:0;
+        padding: 1rem 1rem 1rem 0.3rem;
+    }
+
+    .description{
+        font-size:1.4rem;
+        margin-bottom: 0;
+    }
+
+    .button-add-cart{
+        font-size: 1.4rem;
+    }
+   
+}
